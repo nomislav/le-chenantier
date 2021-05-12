@@ -1,8 +1,5 @@
 index:
-    path: /
-    controller: App\Controller\MainController::index
-
-
-storyboard:
     path: /storyboard
     controller: App\Controller\StoryboardController::index
+
+
