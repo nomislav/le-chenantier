@@ -1,3 +1,8 @@
-index:
+home:
     path: /
+    controller: App\Controller\HomeController::index
+
+index:
+    path: /map
     controller: App\Controller\MainController::index
+

@@ -1,0 +1,57 @@
+body {
+    background: url("../img/background.jpg") no-repeat center center;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#button1 {
+    background-color: #637acc;
+    border-color: #637acc;
+    border-radius: 8px;
+    width: 300px;
+}
+
+#button2 {
+    background-color: #3d8c72;
+    border-color: #3d8c72;
+    border-radius: 8px;
+    width: 300px;
+}
+
+#button1:focus{
+    border-color: #637acc;
+    box-shadow: 0 0 8px #637acc;
+}
+
+#button2:focus{
+    border-color: #3d8c72;
+    box-shadow: 0 0 8px #3d8c72;
+}
+
+h1{
+    font-size: 6em;
+    font-family: "Brush Script MT";
+}
+
+@media all and (max-device-width: 480px)
+{
+    h1{
+        font-weight: bold;
+        font-size: xxx-large;
+    }
+
+    #button1 {
+        margin: 0px 5px;
+        font-size: 1em;
+        width: 200px;
+    }
+
+    #button2 {
+        margin: 5px;
+        font-size: 1em;
+        width: 200px;
+    }
+}
