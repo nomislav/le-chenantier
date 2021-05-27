@@ -4,14 +4,13 @@ namespace App\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 
-class MainController extends AbstractController
+class MapController extends AbstractController
 {
     public function index(): Response
     {
-        return $this->render('main/index.html.twig', [
-            'controller_name' => 'MainController',
+        return $this->render('map/map.html.twig', [
+            'map' => 'MapController',
         ]);
     }
 }
