@@ -1,4 +1,4 @@
-index:
-    methods: GET
-    path: /
+map_index:
+    methods: [GET,POST]
+    path: /map
     controller: App\Controller\MapController::index

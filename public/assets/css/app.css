@@ -30,4 +30,9 @@ a:hover{
     transition: fill 0.3s;
 }
 
+._button{
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+}
 
