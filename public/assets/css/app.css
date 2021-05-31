@@ -1,24 +1,33 @@
 body{
-    background-color: #b0b0b0;
+    background-color: white;
 }
 
 #map{
-    width: 30%;
+    width: 65%;
     margin: auto;
 }
 .cls-1{
-    fill: forestgreen;
-    stroke: gold;
-    stroke-width: 4px;
+    fill: #b0b0b0;
+    stroke: #b0b0b0;
+    stroke-width: 1px;
     transition: fill 0.3s;
 }
 
 .cls-2{
-    fill: darkred;
-    stroke: gold;
+    fill: forestgreen;
+    opacity: 0.5;
+}
+
+.cls-3{
+    fill: green;
+    stroke: darkorange;
+}
+
+a:hover{
+    fill: darkgreen;
+    stroke: yellow;
     stroke-width: 2px;
     transition: fill 0.3s;
 }
-
 
 
