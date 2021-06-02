@@ -2,4 +2,6 @@ index:
     path: /storyboard
     controller: App\Controller\StoryboardController::index
 
-
+dashboard:
+    path: /dashboard
+    controller: App\Controller\DashboardController::index
