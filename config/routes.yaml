@@ -1,4 +1,4 @@
-index:
+storyboard:
     path: /storyboard
     controller: App\Controller\StoryboardController::index
 

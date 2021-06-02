@@ -5,7 +5,7 @@
 {% block body %}
     <nav class="navbar navbar-expand-md nav p-2">
         <!-- Brand -->
-        <a class="navbar-brand" href="#"><i class="fas fa-arrow-left"></i></a>
+        <a class="navbar-brand custom-link" href="#"><i class="fas fa-arrow-left"></i></a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -15,8 +15,20 @@
 
     <div class="container-fluid">
         <div class="content">
-            <p class="text-center p-5">Bonjour et bienvenue au <strong>camping le Chenantier</strong> en Haute Maurienne vanoise, sur la commune de Sollières !</p class="text-center">
+            <p class="text-center p-5">Bonjour et bienvenue au <strong>camping le Chenantier</strong> en Haute Maurienne vanoise, sur la commune de Sollières !</p>
         </div>
     </div>
+
     <img src="/assets/img/feets.png" alt="camping">
+
+    <div class="container-fluid custom-content">
+        <div class="content">
+            <br>
+            <hr>
+            <p class="text-center p-5">Vous avez envie de découvrir les emplacements disponibles ?
+                <br>
+                <button type="button" class="btn btn-primary custom-button text-center">Continuer</button>
+            <p>
+        </div>
+    </div>
 {% endblock %}

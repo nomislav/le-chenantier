@@ -19,6 +19,32 @@ img {
     width: 100%;
 }
 
+hr {
+    border: 2px solid black;
+    width:30%;
+    margin:auto;
+}
+
+.custom-button {
+    border-radius: 5px;
+    border-color:transparent !important;
+    background-color: #BA6948 !important;
+    padding: 10px 50px;
+    margin-top:48px;
+}
+
+.custom-content {
+    background-color: antiquewhite;
+}
+
+.custom-button:hover {
+    color:lightgray;
+}
+
+.custom-link:hover {
+    color:lightgray;
+}
+
 @media all and (max-device-width: 480px)
 {
     p {
