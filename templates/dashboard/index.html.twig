@@ -1,34 +1,36 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Map{% endblock %}
+{% block title %}Dashboard{% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-md nav p-2">
-        <!-- Brand -->
-        <a class="navbar-brand custom-link" href="#"><i class="fas fa-arrow-left"></i></a>
-
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
-
-    <div class="container-fluid">
-        <div class="content">
-            <p class="text-center p-5">Bonjour et bienvenue au <strong>camping le Chenantier</strong> en Haute Maurienne vanoise, sur la commune de Sollières !</p>
+    <div class="container test">
+        <div class="row">
+            <div class="col-4 col-6 display">
+                <button type="button" class="btn btn-primary custom-button-dash display">Code Wifi
+                    <i class="fas fa-wifi fa-2x brown"></i></button>
+            </div>
+            <div class="col-4 col-6 display">
+                <button type="button" class="btn btn-primary custom-button-dash display">Météo
+                    <i class="fas fa-sun fa-2x blue"></i></button>
+            </div>
+            <div class="col-4 col-6 display">
+                <button type="button" class="btn btn-primary custom-button-dash display">Services de proximité
+                    <i class="fas fa-shopping-cart fa-2x green"></i></button>
+            </div>
+            <div class="col-4 col-6 display">
+                <button type="button" class="btn btn-primary custom-button-dash display">Activités à proximité
+                    <i class="fas fa-map-signs fa-2x brown"></i> </button>
+            </div>
+            <div class="col-4 col-6 display">
+                <button type="button" class="btn btn-primary custom-button-dash display">Plan du Camping
+                    <i class="fas fa-map-marked-alt fa-2x blue"></i></button>
+            </div>
+            <div class="col-4 col-6 display">
+                <button type="button" class="btn btn-primary custom-button-dash display">Numéros utiles
+                    <i class="fas fa-phone-square-alt fa-2x green"></i></button>
+            </div>
         </div>
     </div>
 
-    <img src="/assets/img/feets.png" alt="camping">
 
-    <div class="container-fluid custom-content">
-        <div class="content">
-            <br>
-            <hr>
-            <p class="text-center p-5">Vous avez envie de découvrir les emplacements disponibles ?
-                <br>
-                <button type="button" class="btn btn-primary custom-button text-center">Continuer</button>
-            <p>
-        </div>
-    </div>
 {% endblock %}

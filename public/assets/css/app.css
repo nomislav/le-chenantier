@@ -19,9 +19,82 @@ img {
     width: 100%;
 }
 
+hr {
+    border: 2px solid black;
+    width:30%;
+    margin:auto;
+}
+
+.custom-button {
+    border-radius: 5px;
+    border-color:transparent !important;
+    background-color: #BA6948 !important;
+    padding: 10px 50px;
+    margin-top:48px;
+}
+
+.custom-button-dash {
+    width:200px;
+    border-radius: 5px;
+    border-color: transparent !important;
+    background: rgba(255,255,255,0.1) !important;
+    color:white;
+    font-weight: bold;
+    padding: 10px 50px;
+    margin-top:48px;
+}
+
+.custom-content {
+    background-color: antiquewhite;
+}
+
+.custom-link:hover {
+    color:lightgray;
+}
+
+.custom-button-dash:hover {
+    background: rgba(255,255,255,0.3) !important;
+}
+
+.display {
+    display:flex;
+    flex-direction: column;
+    align-items:center;
+    padding:10px;
+}
+
+.fa-2x {
+    padding: 5px;
+}
+
+.test {
+    background-image: url("https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
+    background-size: cover;
+    background-position:bottom;
+    width:100vh;
+    height:100vh;
+}
+
+.brown {
+    color:#BA6948;
+}
+
+.green {
+    color:#3D8C72;
+}
+
+.blue {
+    color:#637ACC;
+}
+
 @media all and (max-device-width: 480px)
 {
     p {
         font-size:small;
+    }
+
+    .custom-button-dash {
+        width:150px;
+        height:110px;
     }
 }
