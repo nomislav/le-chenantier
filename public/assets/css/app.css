@@ -37,8 +37,8 @@ hr {
     width:200px;
     border-radius: 5px;
     border-color: transparent !important;
-    background: rgba(255,255,255,0.1) !important;
-    color:white;
+    background: rgba(255,255,255,0.7) !important;
+    color:black;
     font-weight: bold;
     padding: 10px 50px;
     margin-top:48px;
@@ -53,7 +53,7 @@ hr {
 }
 
 .custom-button-dash:hover {
-    background: rgba(255,255,255,0.3) !important;
+    background: rgba(255,255,255,0.5) !important;
 }
 
 .display {
@@ -68,11 +68,14 @@ hr {
 }
 
 .test {
-    background-image: url("https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500");
-    background-size: cover;
-    background-position:bottom;
-    width:100vh;
     height:100vh;
+    background: url("https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")no-repeat center center;
+    background-attachment: fixed;
+    background-position:50% 75%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .brown {
