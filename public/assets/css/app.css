@@ -34,6 +34,7 @@ body {
 h1{
     font-size: 6em;
     font-family: "Brush Script MT";
+    color: black;
 }
 
 @media all and (max-device-width: 480px)
