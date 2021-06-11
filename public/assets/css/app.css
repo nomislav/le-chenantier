@@ -54,5 +54,58 @@ h1{
         margin: 5px;
         font-size: 1em;
         width: 200px;
+=======
+html, body, p {
+    margin:0;
+    padding:0;
+}
+
+.nav {
+    background-color: #637ACC;
+}
+
+p {
+    padding:20px;
+}
+
+a {
+    color:white;
+}
+
+img {
+    width: 100%;
+}
+
+hr {
+    border: 2px solid black;
+    width:30%;
+    margin:auto;
+}
+
+.custom-button {
+    border-radius: 5px;
+    border-color:transparent !important;
+    background-color: #BA6948 !important;
+    padding: 10px 50px;
+    margin-top:48px;
+}
+
+.custom-content {
+    background-color: antiquewhite;
+}
+
+.custom-button:hover {
+    color:lightgray;
+}
+
+.custom-link:hover {
+    color:lightgray;
+}
+
+@media all and (max-device-width: 480px)
+{
+    p {
+        font-size:small;
+>>>>>>> storyboard
     }
 }
