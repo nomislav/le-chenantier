@@ -1,4 +1,4 @@
-map_index:
-    methods: [GET,POST]
+map_place:
+    methods: [GET, POST]
     path: /map
-    controller: App\Controller\MapController::index
+    controller: App\Controller\MapController::newSelectedPlace
