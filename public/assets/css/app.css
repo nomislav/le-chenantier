@@ -54,7 +54,8 @@ h1{
         margin: 5px;
         font-size: 1em;
         width: 200px;
-=======
+    }
+
 html, body, p {
     margin:0;
     padding:0;
@@ -102,10 +103,8 @@ hr {
     color:lightgray;
 }
 
-@media all and (max-device-width: 480px)
-{
+@media all and (max-device-width: 480px) {
     p {
-        font-size:small;
->>>>>>> storyboard
+        font-size: small;
     }
-}
+    }
