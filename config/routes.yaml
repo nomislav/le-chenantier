@@ -6,3 +6,9 @@ storyboard:
     path: /storyboard
     controller: App\Controller\StoryboardController::index
 
+map_place:
+    methods: [GET, POST]
+    path: /map
+    controller: App\Controller\MapController::newSelectedPlace
+
+
