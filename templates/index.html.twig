@@ -1,13 +1,15 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Accueil{% endblock %}
+{% block title %}
+    <title>Accueil</title>
+{% endblock %}
 
 {% block body %}
-    <div class="container-fluid p-5">
+    <div class="container-fluid p-5 back-index">
         <h1 class="text-center"><strong> Camping le Chenantier</strong></h1>
         <br><br><br><br><br><br><br><br>
         <div class="text-center">
-            <a id="button1" class="btn btn-info btn-lg" href="#">Je souhaite m'installer</a>
+            <a id="button1" class="btn btn-info btn-lg" href="{{ path('storyboard') }}">Je souhaite m'installer</a>
             <a id="button2" class="btn btn-info btn-lg" href="#">Je suis déjà installé</a>
         </div>
     </div>

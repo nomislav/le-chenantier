@@ -1,10 +1,20 @@
 body {
+    margin:0;
+}
+
+.back-index {
     background: url("../img/background.jpg") no-repeat center center;
     background-attachment: fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    height:100vh;
+}
+
+.display-row {
+    display:flex;
+    flex-direction: column;
 }
 
 #button1 {
@@ -32,7 +42,7 @@ body {
 }
 
 h1{
-    font-size: 6em;
+    font-size: 6em !important;
     font-family: "Brush Script MT";
     color: black;
 }
@@ -69,7 +79,7 @@ p {
 }
 
 a {
-    color:white;
+    color:white !important;
 }
 
 img {
@@ -113,6 +123,10 @@ img {
     stroke: darkorange;
 }
 
+.center {
+    display:flex;
+    justify-content: center;
+}
 
 hr {
     border: 2px solid black;
@@ -121,10 +135,10 @@ hr {
 }
 
 .custom-button {
-    border-radius: 5px;
+    border-radius: 5px !important;
     border-color:transparent !important;
     background-color: #BA6948 !important;
-    padding: 10px 50px;
+    padding: 10px 50px !important;
     margin-top:48px;
 }
 

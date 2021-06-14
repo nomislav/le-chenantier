@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    <title>Formulaire</title>
+{% endblock %}
+
+{% block body %}
+    <nav class="navbar navbar-expand-md nav p-2">
+        <a class="navbar-brand" href="{{ path('storyboard') }}"><i class="fas fa-arrow-left"></i></a>
+    </nav>
+    <div class="container-fluid pt-5 text-center">
+        <h4 class="pb-3">Afin de trouver un emplacement, prenez le temps de répondre à ces quelques questions.</h4>
+        {{ form_start(form) }}
+        <div class="center">
+            <hr>
+        </div>
+
+        <br>
+        <div class="container display-row">
+            <div class="form-group p-2">
+                {{ form_label(form.start, 'Date du début de séjour ?') }}
+                {{ form_widget(form.start) }}
+                {{ form_errors(form.start) }}
+            </div>
+            <div class="form-group p-2">
+                {{ form_label(form.end, 'Date de fin de séjour ?') }}
+                {{ form_widget(form.end) }}
+                {{ form_errors(form.end) }}
+            </div>
+            <div class="form-group p-2">
+                {{ form_label(form.adult, 'Nombre d\'adulte(s) ?') }}
+                {{ form_widget(form.adult) }}
+                {{ form_errors(form.adult) }}
+            </div>
+            <div class="form-group p-2">
+                {{ form_label(form.child, 'Nombre d\'enfant(s) ?') }}
+                {{ form_widget(form.child) }}
+                {{ form_errors(form.child) }}
+            </div>
+
+            <div class="form-group p-2">
+                {{ form_label(form.electricity, 'Electricité nécessaire ?') }}
+                {{ form_widget(form.electricity, {'attr':{'class':'text-center'}}) }}
+                {{ form_errors(form.electricity) }}
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary">{{ button_label|default('Continuer') }}</button>
+            </div>
+        </div>
+
+        {{ form_end(form) }}
+    </div>
+{% endblock %}

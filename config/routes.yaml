@@ -6,6 +6,10 @@ storyboard:
     path: /storyboard
     controller: App\Controller\StoryboardController::index
 
+critaryform:
+    path: /critary
+    controller: App\Controller\CritaryFormController::new
+
 map_place:
     methods: [GET, POST]
     path: /map

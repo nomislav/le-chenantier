@@ -1,11 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Map{% endblock %}
+{% block title %}
+    <title>Présentation</title>
+{% endblock %}
 
 {% block body %}
     <nav class="navbar navbar-expand-md nav p-2">
         <!-- Brand -->
-        <a class="navbar-brand custom-link" href="#"><i class="fas fa-arrow-left"></i></a>
+        <a class="navbar-brand custom-link" href="{{ path('index') }}"><i class="fas fa-arrow-left"></i></a>
 
         <!-- Toggler/collapsibe Button -->
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
@@ -24,11 +26,14 @@
     <div class="container-fluid custom-content">
         <div class="content">
             <br>
-            <hr>
+            <div class="center">
+                <hr>
+            </div>
+
             <p class="text-center p-5">Vous avez envie de découvrir les emplacements disponibles ?
                 <br>
-                <button type="button" class="btn btn-primary custom-button text-center">Continuer</button>
-            <p>
+                <a class="btn btn-lg custom-button text-center" href="{{ path('critaryform') }}">Continuer</a>
+            </p>
         </div>
     </div>
 {% endblock %}

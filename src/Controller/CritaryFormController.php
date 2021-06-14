@@ -2,19 +2,19 @@
 
 namespace App\Controller;
 
+use App\Entity\CritaryForm;
+use App\Form\CritaryType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\Routing\Annotation\Route;
 
 class CritaryFormController extends AbstractController
 {
-    /**
-     * @Route("/critary/form", name="critary_form")
-     */
-    public function index(): Response
+    public function new()
     {
-        return $this->render('critary_form/index.html.twig', [
-            'controller_name' => 'CritaryFormController',
+        $critary = new CritaryForm();
+        $form = $this->createForm(CritaryType::class, $critary);
+        $formView = $form->createView();
+        return $this->render('critary_form/new.html.twig', [
+            "form" => $formView,
         ]);
     }
 }
