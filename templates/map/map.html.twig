@@ -362,34 +362,55 @@
     <script>
         function initMap() {
 
-            const myLatlng = { lat: 45.26058510, lng: 6.808338585 };
+            const myCenter = { lat: 45.260411, lng: 6.808781 };
 
             /* map options*/
             const options = {
-                center: { lat: 45.26058510, lng: 6.80838585 },
-                zoom: 19
+                center: myCenter,
+                zoom: 19,
+                disableDefaultUI: true
             }
 
             /* new map */
             const map = new google.maps.Map(document.getElementById("map"), options);
 
-            /* add map */
-            const marker = new google.maps.Marker({
-                position: {lat: 45.2605, lng: 6.8083},
-                map: map
-            });
+            /* Array of markers */
+            var markers = [
+                {
+                    coords: {lat: 45.25995920675679, lng: 6.808865565777209},
+                    content:
+                        '<div class="modal-header"><h3 class="modal-title">Emplacement 69</h3></div>' +
+                        '<div class="modal-body"><div class="btn-container"><button class="btn btn-outline-success">Valider</button><button class="btn btn-outline-danger">Fermer</button></div></div>'
+                },
+                {
+                    coords: {lat: 45.26002717412235, lng: 6.808951396465686},
+                    content:
+                        '<div class="modal-header"><h3 class="modal-title">Emplacement 15</h3></div>' +
+                        '<div class="modal-body"><div class="btn-container"><button class="btn btn-outline-success">Valider</button><button class="btn btn-outline-danger">Fermer</button></div></div>'
+                }
+            ];
 
-            var infoWindow = new google.maps.InfoWindow({
-                content:
-                    '<div class="modal-header"><h3 class="modal-title">Le chenantier test</h3></div>' +
-                    '<div class="modal-body"><div class="btn-container"><button class="btn btn-outline-success">Valider</button><button class="btn btn-outline-danger">Fermer</button></div></div>'
-            });
+            /* loop through markers */
+            for (var i = 0; i < markers.length; i++)
+            {
+                addMarker(markers[i]);
+            }
 
-            marker.addListener('click', function (){
-                infoWindow.open(map, marker);
-            })
+            /* add marker */
+            function addMarker(props)
+            {
+                var marker = new google.maps.Marker({
+                    position: props.coords,
+                    map: map
+                });
+                var infoWindow = new google.maps.InfoWindow({
+                    content: props.content
+                });
+                marker.addListener('click', function (){
+                    infoWindow.open(map, marker);
+                })
+            }
         }
-
     </script>
 
     <script async
