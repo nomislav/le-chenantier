@@ -45,11 +45,15 @@ class CritaryForm
 
     /**
      * @ORM\Column(type="integer", nullable=true)
+     * @Assert\LessThan(value="100", message="Le nombre d'enfant(s) doit être compris entre 0 et 100.")
      */
     private $child;
 
     /**
      * @ORM\Column(type="integer")
+     * @Assert\NotBlank(message="Au moins un adulte est requis.")
+     * @Assert\LessThan(value="100", message="Le nombre d'adulte(s) doit être compris entre 1 et 100.")
+     * @Assert\GreaterThan(value="0", message="Le nombre d'adulte(s) doit être compris entre 1 et 100.")
      */
     private $adult;
 
@@ -66,6 +70,16 @@ class CritaryForm
     public function getId(): ?int
     {
         return $this->id;
+    }
+
+    /**
+     * @var \DateTime
+     */
+    private $date;
+
+    public function __construct()
+    {
+        $this->date = new \DateTime();
     }
 
     public function getStart(): ?\DateTimeInterface
