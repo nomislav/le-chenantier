@@ -15,4 +15,7 @@ map_place:
     path: /map
     controller: App\Controller\MapController::newSelectedPlace
 
+registration:
+    path: /registration
+    controller: App\Controller\SecurityController::registration
 

@@ -86,11 +86,6 @@ img {
     width:100%;
 }
 
-.container{
-    display: flex;
-    justify-content: space-around;
-}
-
 #map{
     width: 100%;
     height: 800px;
@@ -152,6 +147,10 @@ hr {
 
 .custom-link:hover {
     color:lightgray;
+}
+
+.badge{
+    background-color: red;
 }
 
 @media all and (max-device-width: 480px) {

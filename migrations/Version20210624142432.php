@@ -10,7 +10,7 @@ use Doctrine\Migrations\AbstractMigration;
 /**
  * Auto-generated Migration: Please modify to your needs!
  */
-final class Version20210531210932 extends AbstractMigration
+final class Version20210624142432 extends AbstractMigration
 {
     public function getDescription(): string
     {
@@ -20,12 +20,12 @@ final class Version20210531210932 extends AbstractMigration
     public function up(Schema $schema): void
     {
         // this up() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE map ADD start DATETIME DEFAULT NULL, ADD end DATETIME DEFAULT NULL, ADD place_no VARCHAR(100) DEFAULT NULL');
+        $this->addSql('ALTER TABLE critary_form CHANGE place_no place_no INT NOT NULL, CHANGE available available TINYINT(1) NOT NULL, CHANGE tent tent TINYINT(1) DEFAULT NULL, CHANGE caravan caravan TINYINT(1) DEFAULT NULL');
     }
 
     public function down(Schema $schema): void
     {
         // this down() migration is auto-generated, please modify it to your needs
-        $this->addSql('ALTER TABLE map DROP start, DROP end, DROP place_no');
+        $this->addSql('ALTER TABLE critary_form CHANGE place_no place_no INT DEFAULT NULL, CHANGE available available TINYINT(1) DEFAULT NULL, CHANGE tent tent TINYINT(1) NOT NULL, CHANGE caravan caravan TINYINT(1) NOT NULL');
     }
 }
