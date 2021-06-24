@@ -6,7 +6,6 @@ use App\Entity\CritaryForm;
 use App\Form\CritaryType;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\HttpFoundation\Response;
 
 class CritaryFormController extends AbstractController
 {
@@ -15,7 +14,7 @@ class CritaryFormController extends AbstractController
         // creates a new data
         $critary = new CritaryForm();
 
-        //gets the form
+        // gets the form
         $form = $this->createForm(CritaryType::class, $critary);
         $form->handleRequest($request);
 
@@ -26,7 +25,8 @@ class CritaryFormController extends AbstractController
             $em->persist($critary);
             $em->flush();
             // displays the map
-            return $this->render('map/map.html.twig');        }
+            return $this->redirectToRoute('map_place');
+        }
 
         // displays the view
         $formView = $form->createView();

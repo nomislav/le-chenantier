@@ -81,16 +81,8 @@ html, body, p {
     padding:0;
 }
 
-.nav {
-    background-color: #637ACC;
-}
-
 p {
     padding:20px;
-}
-
-a {
-    color:white !important;
 }
 
 img {
@@ -168,6 +160,7 @@ hr {
 .badge-danger{
     background-color: #dc3545;
 }
+
 
 @media all and (max-device-width: 480px) {
     p {
