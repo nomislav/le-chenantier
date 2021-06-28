@@ -1,361 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block title %}
-    <title>Map</title>
+    <title>Plan du camping</title>
 {% endblock %}
 
 {% block stylesheets %}
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-{% endblock %}
-
-{% block body %}
-    <h3>Map Demo</h3>
-        <div class="container">
-            <!--The div element for the map -->
-            <div id="map">
-                    <!-- The Modal -->
-                    {#        <div class="modal" id="myModal">#}
-                    {#            <div class="modal-dialog">#}
-                    {#                <div class="modal-content">#}
-                    {#                    <!-- Modal Header -->#}
-                    {#                    <div class="modal-header">#}
-                    {#                        <h4 class="modal-title">"Emplacement : " + dataId </h4>#}
-                    {#                        <button type="button" class="close" data-dismiss="modal">&times;</button>#}
-                    {#                    </div>#}
-
-                    {#                    <!-- Modal body -->#}
-                    {#                    <div class="modal-body">#}
-
-                    {#                        {{ form_start(form) }}#}
-                    {#                            <div>#}
-                    {#                                {{ form_widget(form.isValided) }}#}
-                    {#                            </div>#}
-
-                    {#                            <div class="_button">#}
-                    {#                                <button class="btn btn-outline-success">#}
-                    {#                                    Je valide mon choix#}
-                    {#                                </button>#}
-                    {#                                <button class="btn btn-outline-danger">#}
-                    {#                                    Retour#}
-                    {#                                </button>#}
-                    {#                            </div>#}
-                    {#                        {{ form_end(form) }}#}
-                    {#                    </div>#}
-                    {#                </div>#}
-                    {#            </div>#}
-                    {#        </div>#}
-            </div>
-            <!--map_le_chenantier.svg-->
-            <div class="map">
-                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 623.44 841.73">
-                    <g id="_back">
-                            <path class="cls-1" d="M1065.11,237.41c-16.18-11.16-43.38-29.49-83.58-38.9-31.38-7.35-56.85-6-76-5-14.72.77-42.08,2.38-76,13-20.12,6.3-58.85,20.88-94,50-11.79,9.77-27.52,24.77-33,30-2.8,2.67-19.77,18.86-31,31-9.72,10.51-40,43.28-57.22,88.07-3.44,9-3.65,12.6-14.83,76.84-10.39,59.7-15.57,89.82-16.11,102.83-1.11,26.73,1.08,67,19.16,117.26,16.19,11.72,37.55,31.19,46.93,60.47,12.33,38.46-5.83,61.58-17.5,138.82-8,53.11-15.87,109,10.57,126.71,10.84,7.26,23.16,5.25,43,2,52.54-8.6,66.08-37.84,116-49,12.22-2.73,24.81-2.82,50-3,83.62-.59,161.41,16.94,166,18,44.19,10.19,82,23.37,106.41,2.59a32.54,32.54,0,0,0,4.79-4.74c7.82-9.66,12.28-28.59,26.41-105.93,6.74-36.92,11.34-63.31,14.65-82.81,6.32-37.23,9.82-55.79,10.77-61.1,15.16-84.84,15.59-80.89,18.24-102.63a829.17,829.17,0,0,0,6-89.94h0a386.63,386.63,0,0,0-9.1-111.93c-5.19-22.43-16-67.42-48.45-116.71C1135.75,305.91,1111,269.08,1065.11,237.41Z" transform="translate(-582.6 -192.21)"/></g>
-                        <g id="_z1">
-                            <path class="cls-2" d="M952.42,258.42a378.45,378.45,0,0,0-101,38A382.72,382.72,0,0,0,728.5,404.5l-113-2a253.31,253.31,0,0,1,18.92-38.08c9.21-15.19,20.94-31.26,51-61,31.76-31.42,47.64-47.13,65-59,44.81-30.63,85.33-40.74,95-43a264.83,264.83,0,0,1,57.08-6.92Z" transform="translate(-582.6 -192.21)"/>
-                            <g id="5" class="cls-3">
-                                <circle data-toggle="modal" data-target="#myModal" cx="322.9" cy="39.29" r="15.5"/>
-                            </g>
-
-                            <g id="6" class="cls-3">
-                                <circle data-toggle="modal" data-target="#myModal" cx="273.9" cy="49.29" r="15.5"/>
-                            </g>
-                            <a class="cls-3">
-                                <g id="_7">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="232.9" cy="66.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_8">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="195.9" cy="92.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_9">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="158.9" cy="120.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_10">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="125.9" cy="152.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_11">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="97.9" cy="189.29" r="15.5"/>
-                                </g>
-                            </a>
-                        </g>
-                        <g id="_z2">
-                            <path class="cls-2" d="M833.8,332,795.5,366.5l-1.83,38.27L891,411l6-75.84Z" transform="translate(-582.6 -192.21)"/>
-                            <a class="cls-3">
-                                <g id="_12">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="278.9" cy="161.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_13">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="262.9" cy="195.29" r="15.5"/>
-                                </g>
-                            </a>
-                        </g>
-                        <g id="_z3">
-                            <path class="cls-2" d="M943.5,284.5l55.08,66.44,56.58,3.06,47.49-41.88L1017.77,211a13.94,13.94,0,0,0-9.09-2,13.28,13.28,0,0,0-5.51,2l-18.74,16.34,46.48,56.18a130.8,130.8,0,0,0-87.41,1Z" transform="translate(-582.6 -192.21)"/>
-                            <a class="cls-3">
-                                <g id="_1">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="433.9" cy="46.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_2">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="481.9" cy="101.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_3">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="448.9" cy="116.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_4">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="412.9" cy="127.29" r="15.5"/>
-                                </g>
-                            </a>
-                        </g>
-                        <g id="_z4">
-                            <path class="cls-2" d="M931.5,369.5h50q1,99,2,198l-52-1Z" transform="translate(-582.6 -192.21)"/>
-                            <a class="cls-3">
-                                <g id="_51">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="374.9" cy="351.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_52">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="373.9" cy="301.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_53">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="374.9" cy="251.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_54">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="373.9" cy="201.29" r="15.5"/>
-                                </g>
-                            </a>
-                        </g>
-                        <g id="_z5">
-                            <rect class="cls-2" x="364.9" y="411.29" width="54" height="51"/>
-                            <a class="cls-3">
-                                <g id="_50">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="391.9" cy="437.29" r="15.5"/>
-                                </g>
-                            </a>
-                        </g>
-                        <g id="_z6">
-                            <path class="cls-2" d="M1034.5,610.5l32.33.43a15.48,15.48,0,0,1,14.67,15.45V648.5a16.4,16.4,0,0,1-16,16l-33-1c-8.89,0-14.51-9.12-14-18l.29-21.65C1019.28,615.36,1026,610.06,1034.5,610.5Z" transform="translate(-582.6 -192.21)"/>
-                        </g>
-                        <g id="_z7">
-                            <path class="cls-2" d="M612.5,412.5,725.66,415s-50,280-51,292L602.5,702.5c-1.81-5.62-4.28-13.49-7-23-3.53-12.32-5.29-18.49-7-27a265.32,265.32,0,0,1-4-29c-.49-5-.92-12.36-1-21-.09-9.09.23-24,4-50,2.51-17.36,2.5-11.63,7-39,2.16-13.13,9.14-58.32,9.86-62.45.91-5.23,2.42-13.51,4.74-24.06C610.43,421,611.63,416,612.5,412.5Z" transform="translate(-582.6 -192.21)"/>
-                            <a class="cls-3">
-                                <g id="_14">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="82.9" cy="238.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_15">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="75.9" cy="270.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_16">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="69.08" cy="301.84" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_17">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="64.08" cy="333.84" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_18">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="59.08" cy="365.84" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_19">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="56.08" cy="397.84" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_20">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="53.9" cy="430.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_21">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="52.9" cy="463.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_22">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="54.9" cy="495.29" r="15.5"/>
-                                </g>
-                            </a>
-                        </g>
-                        <g id="_z8">
-                            <path class="cls-2" d="M693.15,790.73c3.24,2.22,9.29-1.41,12-3,3.54-2.09,23.69-11.39,64-30a63.74,63.74,0,0,1,33-6c23.3,1.73,83.35,7.11,100,8,7.32.39,14.86.63,14.86.63,6.93.23,12.8.33,17.14.37,5.87,0,10.72,0,14,0a128.67,128.67,0,0,0-7-13c-1.43-2.33-24.27-31.56-34-44C883.87,674,883.83,607.6,883.83,607.6c0-35.39,5.15-135.22,4.32-153.87a21.9,21.9,0,0,0-4-12,22.38,22.38,0,0,0-9.65-7.23c-10.08-4.36-20-5.11-33-6-16.47-1.13-50.3-3-53-3-17.51.11-26.27.17-32.35,5.23s-5.81,12.77-8,26c-1.47,8.9-12.15,63.22-12.57,65.49-2.73,14.79-5,29.67-7.43,44.51-5,29.86-34.11,190-37,215C690.9,783.91,690.48,788.89,693.15,790.73Z" transform="translate(-582.6 -192.21)"/>
-                            <a class="cls-3">
-                                <g id="_23">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="197.9" cy="251.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_24">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="272.9" cy="256.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_25">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="190.9" cy="287.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_26">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="269.9" cy="292.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_27">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="186.9" cy="323.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_28">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="265.9" cy="327.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_29">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="179.9" cy="359.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_30">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="260.9" cy="364.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_31">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="172.9" cy="397.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_32">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="256.9" cy="402.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_33">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="166.9" cy="433.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_34">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="252.9" cy="439.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_35">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="160.9" cy="467.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_36">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="249.9" cy="474.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_37">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="154.9" cy="502.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_38">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="244.9" cy="509.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_39">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="146.9" cy="542.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_40">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="239.9" cy="543.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_41">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="319.9" cy="545.29" r="15.5"/>
-                                </g>
-                            </a>
-                        </g>
-                        <g id="_z9">
-                            <path class="cls-2" d="M973.5,762.5h21v-9h67v10h24v-28q-26.25-1.1-52.5-2.26-29.76-1.34-59.5-2.74Z" transform="translate(-582.6 -192.21)"/>
-                            <path class="cls-2" d="M1002.14,731.94l.36-24.44,76,4-1.68,23.59Z" transform="translate(-582.6 -192.21)"/>
-                        </g>
-                        <g id="_z10">
-                            <path class="cls-2" d="M687.87,819.29c15.46-7.8,28.74-14.18,39-19,37.63-17.67,47.86-20.59,59-22,8.08-1,15-1,29-1,14.24,0,10.6.76,37,2,16.59.78,21.11.63,23,4,2.39,4.3-1.45,10.84-8,22-5.58,9.5-8.37,14.24-12,17-10,7.56-20.19,2.55-44,2a165.3,165.3,0,0,0-42,4c-5.58,1.34-11.52,3.14-45,18-12.76,5.67-23.39,10.51-31,14-1.58.88-8.71,4.69-12,2-2.5-2-1.58-6.81,0-14C682.5,840.85,684.79,831,687.87,819.29Z" transform="translate(-582.6 -192.21)"/>
-                            <a class="cls-3">
-                                <g id="_43">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="139.9" cy="633.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_44">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="234.9" cy="608.29" r="15.5"/>
-                                </g>
-                            </a>
-                        </g>
-                        <g id="_z11">
-                            <path class="cls-2" d="M896,780.25l51,1c4.39.09,18,.24,36,1,0,0,13.76.58,33,3s24.54,4.25,27.6,8.89c2.27,3.43,2.31,7.65,2.4,16.11.11,11.06.17,16.84-3,21-4.54,6-13.57,5.79-37,4-28.13-2.15-58-4.24-96-5-26.76-.54-34.66-.88-37-6-2.48-5.42,2.39-13.45,10-26A138.16,138.16,0,0,1,896,780.25Z" transform="translate(-582.6 -192.21)"/>
-                        </g>
-                        <g id="_z12">
-                            <path class="cls-2" d="M1182.5,663.5c-16.75,18.38-30.32,33.21-39.71,43.47-7,7.65-13.86,15.46-21,23-11.36,12-21.86,24.79-33,37-2.69,2.95-9.57,10.45-12,22-.08.42-.15.71-.24,1.24-.5,2.92-.85,7.44-1.76,25.76l-8,75-10,58c.74,14.74,10.67,27.2,24.06,30.72,15.48,4.06,32.6-4.61,38.94-20.72,12-58.07,19.18-99.25,23.71-130.47,0,0,9.24-63.66,26-108,0-.14,5.86-15.93,9.29-26.53,4-12.33,6.87-22.58,8.71-29.47Z" transform="translate(-582.6 -192.21)"/>
-                        </g>
-                        <g id="_z13">
-                            <path class="cls-2" d="M694.8,870.08c14.63-5.55,42-16.45,78-30a207.26,207.26,0,0,1,35-4c12.55-.36,19.54.59,46,3,20.72,1.89,122.19,7,160,9,9.5.5,20.91,1.25,26,9,2.8,4.26,2.9,8.76,2,15-7.23,50-4,61.59-16,71a37.37,37.37,0,0,1-17,7c-17.13,2.41-145.06-9.5-173.3-10.58-95.38-3.63-151.27,74.62-172.7,52.58-6.3-6.47-1.24-36.66,9-97a30.72,30.72,0,0,1,4-11C681.26,875.1,690.62,871.67,694.8,870.08Z" transform="translate(-582.6 -192.21)"/>
-                            <a class="cls-3">
-                                <g id="_45">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="142.9" cy="721.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_46">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="209.9" cy="701.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_47">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="283.9" cy="696.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_48">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="356.9" cy="699.29" r="15.5"/>
-                                </g>
-                            </a>
-                            <a class="cls-3">
-                                <g id="_49">
-                                    <circle data-toggle="modal" data-target="#myModal" cx="421.9" cy="705.29" r="15.5"/>
-                                </g>
-                            </a>
-                        </g>
-                    </svg>
-                </div>
-        </div>
+    <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
 {% endblock %}
 
 {% block javascripts %}
@@ -369,7 +20,8 @@
                 center: myCenter,
                 zoom: 19,
                 disableDefaultUI: true,
-                mapTypeId: 'satellite'
+                mapTypeId: 'satellite',
+                strictBounds: false
             }
 
             /* new map */
@@ -378,16 +30,160 @@
             /* Array of markers */
             var markers = [
                 {
-                    coords: {lat: 45.25995920675679, lng: 6.808865565777209},
-                    content:
-                        '<div class="modal-header"><h3 class="modal-title">Emplacement 69</h3></div>' +
-                        '<div class="modal-body"><div class="btn-container"><button class="btn btn-outline-success">Valider</button><button class="btn btn-outline-danger">Fermer</button></div></div>'
+                    coords: {lat: 45.25975605935657, lng: 6.8085256466722255}
                 },
                 {
-                    coords: {lat: 45.26002717412235, lng: 6.808951396465686},
-                    content:
-                        '<div class="modal-header"><h3 class="modal-title">Emplacement 15</h3></div>' +
-                        '<div class="modal-body"><div class="btn-container"><button class="btn btn-outline-success">Valider</button><button class="btn btn-outline-danger">Fermer</button></div></div>'
+                    coords: {lat: 45.25975605935657, lng: 6.808745587811447}
+                },
+                {
+                    coords: {lat: 45.25981949580543, lng: 6.808873411533254}
+                },
+                {
+                    coords: {lat: 45.25985725555412, lng: 6.809039708492177}
+                },
+                {
+                    coords: {lat: 45.259910119164424, lng: 6.809173818942922}
+                },
+                {
+                    coords: {lat: 45.25994787885464, lng: 6.809302564975637}
+                },
+                {
+                    coords: {lat: 45.26002717412235, lng: 6.809372302410024}
+                },
+                {
+                    coords: {lat: 45.25995920675679, lng: 6.808865565777209}
+                },
+                {
+                    coords: {lat: 45.26002717412235, lng: 6.808951396465686}
+                },
+                {
+                    coords: {lat: 45.25977040809225, lng: 6.808316785878246}
+                },
+                {
+                    coords: {lat: 45.259842151658745, lng: 6.808160681280837}
+                },
+                {
+                    coords: {lat: 45.259921447074106, lng: 6.808200377941516}
+                },
+                {
+                    coords: {lat: 45.259981862554355, lng: 6.808307666302111}
+                },
+                {
+                    coords: {lat: 45.260015846233735, lng: 6.808656353474047}
+                },
+                {
+                    coords: {lat: 45.260102693322, lng: 6.808688539982226}
+                },
+                {
+                    coords: {lat: 45.260246179524565, lng: 6.808715362072375}
+                },
+                {
+                    coords: {lat: 45.260367009729684, lng: 6.808774370670703}
+                },
+                {
+                    coords: {lat: 45.2600989173644, lng: 6.809436675426381}
+                },
+                {
+                    coords: {lat: 45.26017821242118, lng: 6.80947959077062}
+                },
+                {
+                    coords: {lat: 45.26026505926107, lng: 6.809522506114858}
+                },
+                {
+                    coords: {lat: 45.260336802202524, lng: 6.809538398170529}
+                },
+                {
+                    coords: {lat: 45.260427424735816, lng: 6.809589158943394}
+                },
+                {
+                    coords: {lat: 45.26052182305423, lng: 6.809645284134289}
+                },
+                {
+                    coords: {lat: 45.26061999713887, lng: 6.809661176189961}
+                },
+                {
+                    coords: {lat: 45.26061999713887, lng: 6.809661176189961}
+                },
+                {
+                    coords: {lat: 45.260699291467915, lng: 6.809698525917751}
+                },
+                {
+                    coords: {lat: 45.26080501706771, lng: 6.809770744362735}
+                },
+                {
+                    coords: {lat: 45.260247, lng: 6.80903}
+                },
+                {
+                    coords: {lat: 45.2602, lng: 6.809148}
+                },
+                {
+                    coords: {lat: 45.260307 , lng: 6.809088}
+                },
+                {
+                    coords: {lat: 45.26028, lng: 6.809208}
+                },
+                {
+                    coords: {lat: 45.260787, lng: 6.809105}
+                },
+                {
+                    coords: {lat: 45.260373, lng: 6.809149}
+                },
+                {
+                    coords: {lat: 45.260341, lng: 6.809278}
+                },
+                {
+                    coords: {lat: 45.260454, lng: 6.809168}
+                },
+                {
+                    coords: {lat: 45.26041, lng: 6.809316}
+                },
+                {
+                    coords: {lat: 45.260539 , lng: 6.809171}
+                },
+                {
+                    coords: {lat: 45.260499 , lng: 6.809326}
+                },
+                {
+                    coords: {lat: 45.260612 , lng: 6.80919}
+                },
+                {
+                    coords: {lat: 45.260582 , lng: 6.809343}
+                },
+                {
+                    coords: {lat: 45.260694 , lng: 6.809141}
+                },
+                {
+                    coords: {lat: 45.26066 , lng: 6.809359}
+                },
+                {
+                    coords: {lat: 45.261128 , lng: 6.808619}
+                },
+                {
+                    coords: {lat: 45.26116 , lng: 6.80893}
+                },
+                {
+                    coords: {lat: 45.261177 , lng: 6.809083}
+                },
+                {
+                    coords: {lat: 45.261181 , lng: 6.809238}
+                },
+                {
+                    coords: {lat: 45.26119, lng: 6.809399}
+                },
+                {
+                    coords: {lat: 45.260767, lng: 6.80937}
+                },
+                {
+                    coords: {lat: 45.26088, lng: 6.809258}
+                },
+                {
+                    coords: {lat: 45.260861, lng: 6.809445}
+                },
+                {
+                    coords: {lat: 45.260959, lng: 6.809539}
+                },
+                {
+                    coords: {lat: 45.260842, lng: 6.808962}
                 }
             ];
 
@@ -404,19 +200,69 @@
                     position: props.coords,
                     map: map
                 });
-                var infoWindow = new google.maps.InfoWindow({
-                    content: props.content
-                });
-                marker.addListener('click', function (){
-                    infoWindow.open(map, marker);
+
+                var infowindow = new google.maps.InfoWindow();
+
+                // marker.addListener('click', function(){
+                //     infowindow.open(map, marker);
+                // });
+
+                /*Google Map Marker Click Function*/
+                google.maps.event.addListener(marker, 'click', (function(marker)
+                {
+                    return function() {
+                        /*Bootstrap Modal Pop Up Open Code*/
+                        $("#myModal").modal('show');
+                    }
                 })
+                (marker));
             }
         }
     </script>
 
     <script async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfQ3q2ZueCo2jamGTPOrm-uMuJgD2Xmh4&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfQ3q2ZueCo2jamGTPOrm-uMuJgD2Xmh4&callback&libraries=
+places&callback=initMap">
     </script>
 
 
+{% endblock %}
+
+{% block body %}
+    <div class="map_title">
+        <h1>Le chenantier</h1>
+    </div>
+        <div class="container">
+            <!--The div element for the map -->
+            <div id="map"></div>
+            <!-- The Modal -->
+            <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <!-- Modal Header -->
+                        <div class="modal-header">
+                            <h2 class="modal-title">Voulez-vous choisir cette emplacement ?</h2>
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <!-- Modal body -->
+                        <div class="modal-body">
+
+                            {{ form_start(form) }}
+                            <div>
+                                {{ form_widget(form.isValided) }}
+                            </div>
+                            <div class="_button">
+                                <button class="btn btn-outline-success">
+                                    Valider
+                                </button>
+                                <button class="btn btn-outline-danger">
+                                    Retour
+                                </button>
+                            </div>
+                            {{ form_end(form) }}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 {% endblock %}

@@ -36,13 +36,10 @@ class MapController extends AbstractController
             /* set place isValided by user */
             $place->setIsValided(true);
 
-            /* set datetime when user valid his place */
-            $place->setStart(new \DateTimeImmutable('now'));
-
             /* add flash message on success */
             $this->addFlash('success', 'Votre emplacement a été selectionner');
 
-            /* redirect to map_place route after sending */
+            /* redirect to register route after chosing placeNo */
             return $this->redirectToRoute('map_place');
         }
 
