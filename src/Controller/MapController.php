@@ -4,7 +4,6 @@ namespace App\Controller;
 
 use App\Entity\Map;
 use App\Form\MapType;
-use App\Repository\MapRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
@@ -14,7 +13,6 @@ class MapController extends AbstractController
 {
     public function newSelectedPlace
     (
-        MapRepository $mapRepository,
         Request $request
     ): Response
     {

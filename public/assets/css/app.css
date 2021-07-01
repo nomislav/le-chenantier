@@ -106,6 +106,12 @@ img {
     transform: rotate(180deg);
 }
 
+.placeNoButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .btn-container{
     display: flex;
     justify-content: space-around;

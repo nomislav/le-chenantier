@@ -235,32 +235,28 @@ places&callback=initMap">
         <div class="container">
             <!--The div element for the map -->
             <div id="map"></div>
+
             <!-- The Modal -->
             <div class="modal" id="myModal">
-                <div class="modal-dialog">
+                <div class="modal-dialog placeNoButton">
                     <div class="modal-content">
-                        <!-- Modal Header -->
                         <div class="modal-header">
                             <h2 class="modal-title">Voulez-vous choisir cette emplacement ?</h2>
-                            <button type="button" class="close" data-dismiss="modal">&times;</button>
                         </div>
                         <!-- Modal body -->
                         <div class="modal-body">
 
                             {{ form_start(form) }}
-                            <div>
-                                {{ form_widget(form.isValided) }}
-                            </div>
-                            <div class="_button">
-                                <button class="btn btn-outline-success">
-                                    Valider
-                                </button>
-                                <button class="btn btn-outline-danger">
-                                    Retour
-                                </button>
-                            </div>
+                            {{ form_widget(form.isValided)}}
+                            {{ form_widget(form.submit)}}
                             {{ form_end(form) }}
+                            <div>
+
+                            </div>
                         </div>
+                        <button type="button" data-dismiss="modal" class="btn btn-outline-danger close ">
+                            Retour
+                        </button>
                     </div>
                 </div>
             </div>
