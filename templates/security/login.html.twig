@@ -1,0 +1,65 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}<title>Connexion</title>{% endblock %}
+
+{% block body %}
+    <div class="blanck back-login mt-5"></div>
+
+    <div class="container form-group">
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success alert-dismissible fade show text-center">
+                {{ message }}
+            </div>
+        {% endfor %}
+
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div class="card-header">
+                        Connexion
+                    </div>
+                    <div class="card-body">
+                        <form action="{{ path('security_login') }}" method="post">
+
+                            {% if error %}
+                                <div class="alert alert-danger">{{ error.messageKey|trans(error.messageData, 'security') }}</div>
+                            {% endif %}
+
+                            {% if app.user %}
+                                <div class="mb-3">
+                                    Vous êtes connecté avec l'adresse {{ app.user.email }}, <a href="{{ path('logout') }}">Déconnexion</a>
+                                </div>
+                            {% endif %}
+
+                            <div class="form-group row">
+                                <label for="inputEmail" class="col-md-4 col-form-label text-md-right">Adresse email</label>
+                                <div class="col-md-6">
+                                    <input type="email" id="inputEmail" class="form-control" name="_username"  placeholder="Adresse email..." required autofocus>
+                                </div>
+                            </div>
+
+                            <div class="form-group row pt-2">
+                                <label for="inputPassword" class="col-md-4 col-form-label text-md-right">Mot de passe</label>
+                                <div class="col-md-6">
+                                    <input type="password" id="inputPassword" class="form-control" name="_password" placeholder="Mot de passe..."  required>
+                                    <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
+                                </div>
+                            </div>
+
+                            <div class="col-md-6 offset-md-4 text-center pt-3">
+                                <button type="submit" class="btn btn-info" id="button2">
+                                    Connexion
+                                </button>
+                                <a href="#" class="btn btn-link">
+                                    Mot de passe oublié ?
+                                </a>
+                            </div>
+                    </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

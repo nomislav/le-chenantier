@@ -15,4 +15,22 @@ map_place:
     path: /map
     controller: App\Controller\MapController::newSelectedPlace
 
+registration:
+    path: /registration
+    controller: App\Controller\RegistrationController::registration
 
+security_login:
+    path: /login
+    controller: App\Controller\SecurityController::login
+
+security_logout:
+    path: /logout
+    controller: App\Controller\SecurityController::logout
+
+confirm_account:
+    path: /confirm/{token}
+    controller: App\Controller\RegistrationController::confirmAccount
+
+dashboard:
+    path: /dashboard
+    controller: App\Controller\DashboardController::index

@@ -1,6 +1,4 @@
-body {
-    margin:0;
-}
+/** General part **/
 
 .back-index {
     background: url("../img/background.jpg") no-repeat center center;
@@ -47,24 +45,6 @@ h1{
     color: black;
 }
 
-@media all and (max-device-width: 480px) {
-    h1 {
-        font-weight: bold;
-        font-size: xxx-large;
-    }
-
-    #button1 {
-        margin: 0px 5px;
-        font-size: 1em;
-        width: 200px;
-    }
-
-    #button2 {
-        margin: 5px;
-        font-size: 1em;
-        width: 200px;
-    }
-}
 html, body, p {
     margin:0;
     padding:0;
@@ -85,6 +65,30 @@ a {
 img {
     width:100%;
 }
+
+hr {
+    border: 2px solid black;
+    width:30%;
+    margin:auto;
+}
+
+.custom-button {
+    border-radius: 5px !important;
+    border-color:transparent !important;
+    background-color: #BA6948 !important;
+    padding: 10px 50px !important;
+    margin-top:20px!important;
+}
+
+.custom-button:hover {
+    color:lightgray;
+}
+
+.custom-link:hover {
+    color:lightgray;
+}
+
+/** Map part **/
 
 .map_title h1{
     text-align: center;
@@ -117,38 +121,87 @@ img {
     justify-content: space-around;
 }
 
+/** Dashboard & storyboard part **/
+
 .center {
     display:flex;
     justify-content: center;
-}
-
-hr {
-    border: 2px solid black;
-    width:30%;
-    margin:auto;
-}
-
-.custom-button {
-    border-radius: 5px !important;
-    border-color:transparent !important;
-    background-color: #BA6948 !important;
-    padding: 10px 50px !important;
-    margin-top:48px;
 }
 
 .custom-content {
     background-color: antiquewhite;
 }
 
-.custom-button:hover {
-    color:lightgray;
+/** Auth part **/
+
+.navbar-laravel {
+    box-shadow: 0 2px 4px rgba(0,0,0,.04);
 }
 
-.custom-link:hover {
-    color:lightgray;
+.navbar-brand , .nav-link, .my-form, .login-form {
+    font-family: Raleway, sans-serif;
 }
+
+.my-form {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.my-form .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.login-form {
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.login-form .row {
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.btn-link {
+    color: grey!important;
+    text-decoration: none!important;
+}
+
+.back-login {
+    background: url("../img/mountains.png");
+    background-repeat: no-repeat;
+    background-attachment: inherit;
+    background-position: center;
+}
+
+.blanck {
+    height: 280px;
+}
+
+.badge{
+    background-color: red;
+}
+
+/** Media queries part **/
 
 @media all and (max-device-width: 480px) {
+    h1 {
+        font-weight: bold;
+        font-size: xxx-large;
+    }
+
+    #button1 {
+        margin: 0px 5px;
+        font-size: 1em;
+        width: 200px;
+    }
+
+    #button2 {
+        margin: 0px 5px;
+        font-size: 1em;
+        width: 200px;
+    }
+
     p {
         font-size: small;
     }
