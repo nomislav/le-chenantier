@@ -49,7 +49,7 @@ class RegistrationController extends AbstractController
 
             $this->mailer->sendEmail($user->getEmail(), $user->getToken());
 
-            return $this->redirectToRoute('login');
+            return $this->redirectToRoute('security_login');
         }
 
         return $this->render('security/registration.html.twig', [
@@ -63,16 +63,17 @@ class RegistrationController extends AbstractController
     public function confirmAccount(string $token)
     {
         $user = $this->userRepository->findOneBy(["token" => $token]);
+
         if($user) {
             $user->setToken(null);
             $em = $this->getDoctrine()->getManager();
             $em->persist($user);
             $em->flush();
-            $this->addFlash("success", "Compte actif !");
-            return $this->redirectToRoute("index");
+            $this->addFlash("success", "Le compte a bien été validé. Veuillez vous connecter afin de continuer votre navigation !");
+            return $this->redirectToRoute("security_login");
         } else {
-            $this->addFlash("error", "Ce compte n'exsite pas !");
-            return $this->redirectToRoute('index');
+            $this->addFlash("error", "Le compte n'exsite pas. Veuillez réessayer.");
+            return $this->redirectToRoute('registration');
         }
     }
 

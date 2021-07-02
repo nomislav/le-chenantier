@@ -24,7 +24,7 @@ class AppAuthenticator extends AbstractFormLoginAuthenticator implements Passwor
 {
     use TargetPathTrait;
 
-    public const LOGIN_ROUTE = 'login';
+    public const LOGIN_ROUTE = 'security_login';
 
     private $entityManager;
     private $urlGenerator;
