@@ -8,7 +8,6 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\IntegerType;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
-use Symfony\Component\Validator\Constraints\Choice;
 
 class CritaryType extends AbstractType
 {
@@ -17,9 +16,11 @@ class CritaryType extends AbstractType
         $builder
             ->add('start', DateType::class, [
                 'widget' => 'single_text',
+                'data' => new \DateTime("now")
             ])
             ->add('end', DateType::class, [
                 'widget' => 'single_text',
+                'data' => new \DateTime("now")
             ])
             ->add('adult', IntegerType::class, [
                 'attr' => [
@@ -34,6 +35,18 @@ class CritaryType extends AbstractType
                 'max' => 100,
                 'placeholder' => 'Enfant(s)'
                 ]
+            ])
+            ->add('tent', ChoiceType::class, [
+                'choices'  => [
+                    'Oui' => true,
+                    'Non' => false,
+                ],
+            ])
+            ->add('caravan', ChoiceType::class, [
+                'choices'  => [
+                    'Oui' => true,
+                    'Non' => false,
+                ],
             ])
             ->add('electricity', ChoiceType::class, [
                 'choices'  => [
