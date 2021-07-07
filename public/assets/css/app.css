@@ -118,6 +118,49 @@ hr {
 
 /** Dashboard & storyboard part **/
 
+
+.fa-2x {
+    padding: 5px;
+}
+
+.test {
+    height:100vh;
+    background: url("https://images.pexels.com/photos/2422265/pexels-photo-2422265.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500")no-repeat center center;
+    background-attachment: fixed;
+    background-position:50% 75%;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.brown {
+    color:#BA6948;
+}
+
+.green {
+    color:#3D8C72;
+}
+
+.blue {
+    color:#637ACC;
+}
+
+.custom-button-dash {
+    width:200px;
+    border-radius: 5px;
+    border-color: transparent !important;
+    background: rgba(255,255,255,0.7) !important;
+    color:black;
+    font-weight: bold;
+    padding: 10px 50px;
+    margin-top:48px;
+}
+
+.custom-button-dash:hover {
+    background: rgba(255,255,255,0.5) !important;
+}
+
 .center {
     display:flex;
     justify-content: center;
@@ -178,6 +221,7 @@ hr {
 
 /** Critaryform part **/
 
+
 .back-critary {
     background: url("../img/mountains.png") no-repeat bottom right;
     background-attachment: inherit;
@@ -220,5 +264,10 @@ i{
         background-attachment: inherit;
         display: inline-table;
         background-position-x: left;
+    }
+
+    .custom-button-dash {
+        width:150px;
+        height:110px;
     }
 }
