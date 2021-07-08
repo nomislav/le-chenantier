@@ -7,23 +7,116 @@
 {% block body %}
     <div class="container-fluid">
         <div class="content">
-            <h3 class="text-center p-5">Bonjour et bienvenue au <strong>camping le Chenantier</strong> en Haute Maurienne vanoise, sur la commune de Sollières !</h3>
+            <h3 class="text-center py-5">Bonjour et bienvenue au <strong>camping le Chenantier</strong> en Haute Maurienne vanoise, sur la commune de Sollières !</h3>
         </div>
     </div>
 
     <img src="/assets/img/feets.png" alt="camping">
 
-    <div class="container-fluid custom-content">
-        <div class="content">
-            <br>
-            <div class="center">
-                <hr>
+    <section class="page-section py-5">
+        <div class="container px-4 px-lg-5">
+            <h2 class="text-center mt-0">A votre disposition</h2>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5">
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fas fa-ice-cream"></i></div>
+                        <h3 class="h4 mb-2">Glaces et boissons</h3>
+                        <p class="text-muted mb-0">Rendez-vous au petit lac de détente</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fas fa-bread-slice"></i></div>
+                        <h3 class="h4 mb-2">Pain frais</h3>
+                        <p class="text-muted mb-0">Livraison tous les matins au camping</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fas fa-shapes"></i></div>
+                        <h3 class="h4 mb-2">Aire de jeux</h3>
+                        <p class="text-muted mb-0">Idéal pour les enfants</p>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 text-center">
+                    <div class="mt-5">
+                        <div class="mb-2"><i class="fas fa-shopping-cart"></i></div>
+                        <h3 class="h4 mb-2">Grandes surfaces</h3>
+                        <p class="text-muted mb-0">Pour se ravitailler à moins de 500m</p>
+                    </div>
+                </div>
             </div>
+        </div>
+    </section>
 
-            <p class="text-center py-3">Vous avez envie de découvrir les emplacements disponibles ?
-                <br>
-                <a class="btn btn-lg custom-button-brown text-center" href="{{ path('critaryform') }}">Continuer</a>
-            </p>
+
+    <div id="portfolio">
+        <div class="container-fluid p-0">
+            <div class="row g-0">
+                <div class="col-lg-4 col-sm-6">
+                    <div class="portfolio-box">
+                        <img class="img-fluid" src="/assets/img/1.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-name">Extérieur châlet</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="portfolio-box">
+                        <img class="img-fluid" src="/assets/img/2.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-name">Coin repos intérieur châlet</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="portfolio-box">
+                        <img class="img-fluid" src="/assets/img/3.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-name">Espace commun extérieur</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="portfolio-box">
+                        <img class="img-fluid" src="/assets/img/4.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-name">Extérieur yourte</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="portfolio-box">
+                        <img class="img-fluid" src="/assets/img/5.jpg" alt="..." />
+                        <div class="portfolio-box-caption">
+                            <div class="project-name">Coin détente intérieur châlet</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-4 col-sm-6">
+                    <div class="portfolio-box">
+                        <img class="img-fluid" src="/assets/img/6.jpg" alt="..." />
+                        <div class="portfolio-box-caption p-3">
+                            <div class="project-name">Espace châlet extérieur</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
+
+    <section class="page-section bg-light py-5">
+        <div class="container px-4 px-lg-5">
+            <div class="row gx-4 gx-lg-5 justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="mt-0">Envie d'en savoir plus</h2>
+                    <hr class="divider divider-light" />
+                    <p class="text-white-75 mb-4">Le camping se trouve à 1250m d'altitude, au milieu de la vallée pour une navigation facile, en étoile, sur l'ensemble du territoire. Moins de 30 minutes de trajet en voiture par jour garanti !
+                    </p>
+                    <a class="btn custom-button-brown text-center" href="{{ path('critaryform') }}">Continuer</a>
+                </div>
+            </div>
+        </div>
+    </section>
 {% endblock %}
