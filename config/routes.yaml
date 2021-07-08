@@ -34,3 +34,11 @@ confirm_account:
 dashboard:
     path: /dashboard
     controller: App\Controller\DashboardController::index
+
+legal_notices:
+    path: /legal
+    controller: App\Controller\LegalController::legal_notices
+
+terms_services:
+    path: /terms_services
+    controller: App\Controller\LegalController::terms_services

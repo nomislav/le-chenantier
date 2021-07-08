@@ -1,5 +1,4 @@
 /** General part **/
-
 .back-index {
     background: url("../img/background.jpg") no-repeat center center;
     background-attachment: fixed;
@@ -10,56 +9,29 @@
     height:100vh;
 }
 
+.blank-index {
+    height: 200px;
+}
+
 .display-row {
     display:flex;
     flex-direction: column;
 }
 
-#button1 {
-    background-color: #637acc;
-    border-color: #637acc;
-    border-radius: 8px;
-    width: 300px;
-}
-
-#button2 {
-    background-color: #3d8c72;
-    border-color: #3d8c72;
-    border-radius: 8px;
-    width: 300px;
-}
-
-#button1:focus {
-    border-color: #637acc;
-    box-shadow: 0 0 8px #637acc;
-}
-
-#button2:focus {
-    border-color: #3d8c72;
-    box-shadow: 0 0 8px #3d8c72;
-}
-
 h1 {
     font-size: 6em !important;
-    font-family: "Arial";
     color: black;
 }
 
 html, body, p {
     margin:0;
     padding:0;
-}
-
-.nav {
-    background-color: #637ACC;
-}
-
-p {
-    padding:20px;
+    font-family: 'Encode Sans SC', sans-serif!important;
 }
 
 a {
     color:white !important;
+    text-decoration: none!important;
 }
 
 img {
@@ -72,20 +44,104 @@ hr {
     margin:auto;
 }
 
-.custom-button {
-    border-radius: 5px !important;
-    border-color:transparent !important;
-    background-color: #BA6948 !important;
+.custom-button-brown {
+    background-color: white!important;
+    color: #BA6948!important;
+    border: 1px solid #BA6948!important;
     padding: 10px 50px !important;
     margin-top:20px!important;
+    border-radius: 5px !important;
 }
 
-.custom-button:hover {
-    color:lightgray;
+.custom-button-brown:hover {
+    border-color:transparent !important;
+    background-color: #BA6948 !important;
+    color: white!important;
 }
 
-.custom-link:hover {
-    color:lightgray;
+.custom-button-blue {
+    border-color:transparent!important;
+    background-color: #637ACC!important;
+    color: white!important;
+    padding: 10px 50px !important;
+    margin-top:20px!important;
+    border-radius: 5px !important;
+    width: 350px!important;
+}
+
+.custom-button-blue:hover {
+    opacity: 0.8;
+}
+
+.custom-button-green {
+    border-color:transparent!important;
+    background-color: #3D8C72!important;
+    color: white!important;
+    padding: 10px 50px !important;
+    margin-top:20px!important;
+    border-radius: 5px !important;
+    width: 350px!important;
+}
+
+.custom-button-green:hover {
+    opacity: 0.8;
+}
+
+.custom-button-white {
+    background-color: #3D8C72!important;
+    color: white!important;
+    border: 1px solid white!important;
+    padding: 10px 50px !important;
+    margin-top:20px!important;
+    border-radius: 5px !important;
+}
+
+.custom-button-white:hover {
+    border-color:transparent !important;
+    background-color: white !important;
+    color: #3D8C72!important;
+}
+
+.btn:focus {
+    box-shadow:none!important;
+}
+
+.form-control:focus {
+    border-color: transparent!important;
+    box-shadow: inset 0 1px 1px gray, 0 0 8px gray!important;
+}
+
+#button1 {
+    background-color: #3D8C72;
+    border-color: #3D8C72;
+    border-radius: 8px;
+    width: 300px;
+}
+
+#button2 {
+    background-color: #637ACC;
+    border-color: #637ACC;
+    border-radius: 8px;
+    width: 300px;
+}
+
+/** Navbar & footer part **/
+
+#navbarNav {
+    justify-content: flex-end;
+}
+
+footer {
+    bottom: 0!important;
+    width: 100%!important;
+}
+
+.background-footer {
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.champ {
+    height: 150px!important;
 }
 
 /** Map part **/
@@ -135,15 +191,23 @@ hr {
 }
 
 .brown {
-    color:#BA6948;
+    color:#BA6948!important;
 }
 
 .green {
-    color:#3D8C72;
+    color:#3D8C72!important;
+}
+
+.background-green {
+    background-color:#3D8C72!important;
 }
 
 .blue {
-    color:#637ACC;
+    color:#637ACC!important;
+}
+
+.background-blue{
+    background-color:#637ACC!important;
 }
 
 .custom-button-dash {
@@ -166,20 +230,7 @@ hr {
     justify-content: center;
 }
 
-.custom-content {
-    background-color: antiquewhite;
-}
-
 /** Auth part **/
-
-.navbar {
-    box-shadow: 0 2px 4px rgba(0,0,0,.04);
-    background-color: #637acc !important;
-}
-
-.navbar-brand , .nav-link, .my-form, .login-form {
-    font-family: Raleway, sans-serif;
-}
 
 .my-form {
     padding-top: 1.5rem;
@@ -206,13 +257,9 @@ hr {
     text-decoration: none!important;
 }
 
-.back-login {
-    background: url("../img/mountains.png") no-repeat center;
-    background-attachment: inherit;
-}
 
 .blank {
-    height: 280px;
+    height: 200px;
 }
 
 .badge {
@@ -238,10 +285,9 @@ i{
 
 /** Media queries part **/
 
-@media all and (max-device-width: 480px) {
+@media (max-width: 576px) {
     h1 {
-        font-weight: bold;
-        font-size: xxx-large;
+        font-size: xx-large!important;
     }
 
     #button1 {
@@ -269,5 +315,37 @@ i{
     .custom-button-dash {
         width:150px;
         height:110px;
+    }
+
+    .col-8 {
+        display: flex;
+    }
+
+    .navbar-brand {
+        padding: 20px;
+    }
+
+    footer {
+        position: revert!important;
+        left: 0!important;
+    }
+
+    .padding {
+        padding-top: 10px!important;
+    }
+
+    .custom-button-blue {
+        width: 150px!important;
+    }
+
+    .custom-button-green {
+        width: 150px!important;
+    }
+
+}
+
+@media (max-width: 992px) {
+    h1 {
+        font-weight: normal!important;
     }
 }

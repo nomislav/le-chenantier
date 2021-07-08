@@ -5,12 +5,19 @@
 {% endblock %}
 
 {% block body %}
-    <div class="container-fluid p-5 back-index">
-        <h1 class="text-center"><strong> Camping le Chenantier</strong></h1>
-        <br><br><br><br><br><br><br><br>
-        <div class="text-center">
-            <a id="button1" class="btn btn-info btn-lg" href="{{ path('storyboard') }}">Je souhaite m'installer</a>
-            <a id="button2" class="btn btn-info btn-lg" href="{{ path('security_login') }}">Je suis déjà installé</a>
+    <div class="container-fluid back-index">
+
+        <div class="blank-index"></div>
+
+        <h1 class="text-center"><strong> CAMPING LE CHENANTIER</strong></h1>
+
+        <h4 class="text-center pb-4">Nous sommes ravis de vous accueillir sur le site du camping !</h4>
+
+        <div class="text-center pt-5">
+            <a class="btn custom-button-blue btn-lg mb-2" href="{{ path('storyboard') }}">Je souhaite m'installer</a>
+            <a class="btn custom-button-green btn-lg mb-2" href="{{ path('security_login') }}">Je suis déjà installé</a>
         </div>
+
+        <div class="blank-index"></div>
     </div>
 {% endblock %}

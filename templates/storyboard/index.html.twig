@@ -5,19 +5,9 @@
 {% endblock %}
 
 {% block body %}
-    <nav class="navbar navbar-expand-md nav p-2">
-        <!-- Brand -->
-        <a class="navbar-brand custom-link" href="{{ path('index') }}"><i class="fas fa-arrow-left"></i></a>
-
-        <!-- Toggler/collapsibe Button -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-    </nav>
-
     <div class="container-fluid">
         <div class="content">
-            <p class="text-center p-5">Bonjour et bienvenue au <strong>camping le Chenantier</strong> en Haute Maurienne vanoise, sur la commune de Sollières !</p>
+            <h3 class="text-center p-5">Bonjour et bienvenue au <strong>camping le Chenantier</strong> en Haute Maurienne vanoise, sur la commune de Sollières !</h3>
         </div>
     </div>
 
@@ -30,9 +20,9 @@
                 <hr>
             </div>
 
-            <p class="text-center p-5">Vous avez envie de découvrir les emplacements disponibles ?
+            <p class="text-center py-3">Vous avez envie de découvrir les emplacements disponibles ?
                 <br>
-                <a class="btn btn-lg custom-button text-center" href="{{ path('critaryform') }}">Continuer</a>
+                <a class="btn btn-lg custom-button-brown text-center" href="{{ path('critaryform') }}">Continuer</a>
             </p>
         </div>
     </div>
