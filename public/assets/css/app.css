@@ -230,6 +230,10 @@ footer {
     justify-content: center;
 }
 
+.form-group {
+    padding: 5px 10px;!important;
+}
+
 .g-0,
 .gx-0 {
     --bs-gutter-x: 0;

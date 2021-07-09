@@ -42,3 +42,8 @@ legal_notices:
 terms_services:
     path: /terms_services
     controller: App\Controller\LegalController::terms_services
+
+contact:
+    methods: [GET,POST]
+    path: /contact
+    controller: App\Controller\ContactController::index
