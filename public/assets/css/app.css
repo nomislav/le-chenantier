@@ -167,10 +167,10 @@ footer {
 
 /** Map part **/
 
-.map_title h1 {
+.map_title {
     text-align: center;
-    color: white;
 }
+
 
 #map {
     width: 100%;
@@ -211,14 +211,15 @@ footer {
 }
 
 .custom-button-dash {
-    width:200px;
-    border-radius: 5px;
+    width:200px !important;
+    height:120px !important;
+    border-radius: 5px !important;
     border-color: transparent !important;
     background: rgba(255,255,255,0.7) !important;
-    color:black;
-    font-weight: bold;
-    padding: 10px 50px;
-    margin-top:48px;
+    color:black !important;
+    font-weight: bold !important;
+    padding: 10px 50px !important;
+    margin-top:48px !important;
 }
 
 .custom-button-dash:hover {
@@ -226,8 +227,14 @@ footer {
 }
 
 .center {
+    display:flex !important;
+    justify-content: center !important;
+}
+
+.display {
     display: flex;
     justify-content: center;
+    align-items:center;
 }
 
 .g-0,

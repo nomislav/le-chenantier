@@ -42,3 +42,12 @@ legal_notices:
 terms_services:
     path: /terms_services
     controller: App\Controller\LegalController::terms_services
+
+
+admin:
+    path: /admin
+    controller: App\Controller\AdminController::index
+
+gestion:
+    path: /admin/gestion
+    controller: App\Controller\AdminController::gestion

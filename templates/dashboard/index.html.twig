@@ -1,43 +1,111 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Dashboard{% endblock %}
+{% block title %}<title>Dashboard</title>{% endblock %}
+
+{% block stylesheets %}
+{% endblock %}
 
 {% block body %}
     <div class="test">
-    <div class="container">
-        <div class="row">
-            <div class="col-4 col-6 display">
-                <button type="button" class="btn btn-primary custom-button-dash display">Code Wifi
-                    <i class="fas fa-wifi fa-2x brown"></i>
-                </button>
-            </div>
-            <div class="col-4 col-6 display">
-                <button type="button" class="btn btn-primary custom-button-dash display">Météo
-                    <i class="fas fa-sun fa-2x blue"></i>
-                </button>
-            </div>
-            <div class="col-4 col-6 display">
-                <button type="button" class="btn btn-primary custom-button-dash display">Services de proximité
-                    <i class="fas fa-shopping-cart fa-2x green"></i>
-                </button>
-            </div>
-            <div class="col-4 col-6 display">
-                <button type="button" class="btn btn-primary custom-button-dash display">Activités à proximité
-                    <i class="fas fa-map-signs fa-2x brown"></i>
-                </button>
-            </div>
-            <div class="col-4 col-6 display">
-                <button type="button" class="btn btn-primary custom-button-dash display">Plan du Camping
-                    <i class="fas fa-map-marked-alt fa-2x blue"></i>
-                </button>
-            </div>
-            <div class="col-4 col-6 display">
-                <button type="button" class="btn btn-primary custom-button-dash display">Numéros utiles
-                    <i class="fas fa-phone-square-alt fa-2x green"></i>
-                </button>
+        <div class="container">
+            <div class="row">
+                <div class="col-4 col-6 display">
+                    <button type="button" class="btn btn-primary custom-button-dash display" data-toggle="modal" data-target="#WifiModal">Code Wifi<br>
+                        <i class="fas fa-wifi fa-2x brown"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="WifiModal" tabindex="-1" role="dialog" aria-labelledby="WifiModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Code Wifi</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="card full">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><i class="fas fa-wifi p-2"></i></i>chenantier</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-6 display">
+                    <button type="button" class="btn btn-primary custom-button-dash display" data-toggle="modal" data-target="#MeteoModal">Météo<br>
+                        <i class="fas fa-sun fa-2x blue"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="MeteoModal" tabindex="-1" role="dialog" aria-labelledby="MeteoModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Météo</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="card full">
+                                    <a class="weatherwidget-io" href="https://forecast7.com/fr/45d266d80/sollieres-sardieres/" data-label_1="SOLLIÈRES-SARDIÈRES" data-label_2="MÉTÉO" data-theme="original" >SOLLIÈRES-SARDIÈRES MÉTÉO</a>
+                                    <script>
+                                        !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='https://weatherwidget.io/js/widget.min.js';fjs.parentNode.insertBefore(js,fjs);}}(document,'script','weatherwidget-io-js');
+                                    </script>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4 col-6 display">
+                    <button type="button" class="btn btn-primary custom-button-dash display">Services de proximité
+                        <i class="fas fa-shopping-cart fa-2x green"></i>
+                    </button>
+                </div>
+                <div class="col-4 col-6 display">
+                    <button type="button" class="btn btn-primary custom-button-dash display">Activités à proximité
+                        <i class="fas fa-map-signs fa-2x brown"></i>
+                    </button>
+                </div>
+                <div class="col-4 col-6 display">
+                    <button type="button" class="btn btn-primary custom-button-dash display">Plan du Camping<br>
+                        <i class="fas fa-map-marked-alt fa-2x blue"></i>
+                    </button>
+                </div>
+                <div class="col-4 col-6 display">
+                    <button type="button" class="btn btn-primary custom-button-dash display" data-toggle="modal" data-target="#NumModal">Numéros utiles<br>
+                        <i class="fas fa-phone-square-alt fa-2x green"></i>
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="NumModal" tabindex="-1" role="dialog" aria-labelledby="NumModal" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLongTitle">Numéros Utiles</h5>
+                            </div>
+                            <div class="modal-body">
+                                <div class="card full">
+                                    <ul class="list-group list-group-flush">
+                                        <li class="list-group-item"><i class="fas fa-user-secret p-2"></i> Gendarmerie : <a href="tel:04 79 05 90 17">04 79 05 90 17</a></li>
+                                        <li class="list-group-item"><i class="fas fa-stethoscope p-2"></i> Dr Lanslevillard : <a href="tel:04 79 05 91 96">04 79 05 91 96</a></li>
+                                        <li class="list-group-item"><i class="fas fa-phone p-2"></i> URGENCES : <a href="tel:112">112</a></li>
+                                        <li class="list-group-item"><i class="fas fa-ambulance p-2"></i> SAMU : <a href="tel:15">15</a></li>
+                                        <li class="list-group-item"><i class="fas fa-fire-extinguisher p-2"></i> POMPIERS : <a href="tel:18">18</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-    </div>
     </div>
 
 {% endblock %}
