@@ -47,6 +47,8 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", nullable=true)
+     * @Assert\Length(min=10, minMessage="Votre mot de passe doit faire au minimum 10 caractères.")
+     * @Assert\Length(max=20, maxMessage="Votre mot de passe doit faire au maximum 20 caractères.")
      */
     private $phone;
 
@@ -58,6 +60,9 @@ class User implements UserInterface
     /**
      * @ORM\Column(type="string", length=255)
      * @Assert\Length(min=8, minMessage="Votre mot de passe doit faire au minimum 8 caractères")
+     * @Assert\Regex (
+     *     pattern="/^(?=.*[!@#$%^&*-])(?=.*[0-9])(?=.*[A-Z]).{8,20}$/",
+     *     message="Votre mot de passe doit contenir au minimum 8 caractères, une majuscule, un chiffre et un caractère spécial.")
      */
     private $password;
 

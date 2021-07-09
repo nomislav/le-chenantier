@@ -25,15 +25,17 @@ class ContactController extends AbstractController
 
             $message = (new TemplatedEmail())
                 ->from($contactFormData->getEmail())
-                ->to('porekiw306@ovooovo.com')
-                ->subject('Vous avez reçu un email')
+                ->to('tanoxej309@godpeed.com')
+                ->subject('Le Chenantier : Nouvelle demande')
                 ->htmlTemplate('contact\contact_email.html.twig')
                 ->context([
+                    'contactFormDataName'         => $contactFormData->getName(),
                     'contactFormDataEmail'         => $contactFormData->getEmail(),
+                    'contactFormDataPhone'         => $contactFormData->getPhone(),
                     'contactFormDataMessage'       => $contactFormData->getMessage(),
                 ]);
             $mailer->send($message);
-            $this->addFlash('success', 'Votre message a été envoyé');
+            $this->addFlash('success', 'Votre message a bien été envoyé');
 
             return $this->redirectToRoute('contact');
         }

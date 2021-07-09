@@ -287,6 +287,12 @@ footer {
     opacity: 1;
 }
 
+/** Contact part **/
+
+.resize {
+    resize: none;
+}
+
 /** Auth part **/
 
 .my-form {

@@ -72,7 +72,7 @@ class RegistrationController extends AbstractController
             $this->addFlash("success", "Le compte a bien été validé. Veuillez vous connecter afin de continuer votre navigation !");
             return $this->redirectToRoute("security_login");
         } else {
-            $this->addFlash("error", "Le compte n'exsite pas. Veuillez réessayer.");
+            $this->addFlash("error", "Le compte n'existe pas. Veuillez réessayer.");
             return $this->redirectToRoute('registration');
         }
     }
