@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %} <title>Contact</title> {% endblock %}
+
+{% block body %}
+    <div class="container py-5 center">
+        <div class="col-md-7">
+            <div class="card">
+                <div class="card-header">Formulaire de contact</div>
+                {{ form_start(form) }}
+                {{ form_row(form.name, {'attr' : {'placeholder': 'Nom' , 'class': 'col-md'}})  }}
+                {{ form_row(form.email, {'attr' : {'placeholder': 'Adresse email' , 'class': 'col-md'}})  }}
+                {{ form_row(form.phone, {'attr' : {'placeholder': 'Téléphone' , 'class': 'col-md'}})  }}
+                {{ form_row(form.message, {'attr' : {'placeholder': 'Message' , 'class': 'col-md'}})  }}
+                <div class="text-center">
+                    {{ form_row(form.submit, {'attr' : {'class': 'btn custom-button-brown my-3'}}) }}
+                </div>
+                {{ form_end(form) }}
+                </div>
+        </div>
+    </div>
+
+{% endblock %}
