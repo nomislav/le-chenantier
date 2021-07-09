@@ -51,3 +51,4 @@ admin:
 gestion:
     path: /admin/gestion
     controller: App\Controller\AdminController::gestion
+
