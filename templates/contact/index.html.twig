@@ -3,15 +3,20 @@
 {% block title %} <title>Contact</title> {% endblock %}
 
 {% block body %}
+    {% for message in app.flashes('success') %}
+        <div class="alert alert-light alert-dismissible fade show text-center">
+            {{ message }}
+        </div>
+    {% endfor %}
     <div class="container py-5 center">
         <div class="col-md-7">
             <div class="card">
                 <div class="card-header">Formulaire de contact</div>
                 {{ form_start(form) }}
-                {{ form_row(form.name, {'attr' : {'placeholder': 'Nom' , 'class': 'col-md'}})  }}
+                {{ form_row(form.name, {'attr' : {'placeholder': 'Nom' , 'class': 'col-md mt-2'}})  }}
                 {{ form_row(form.email, {'attr' : {'placeholder': 'Adresse email' , 'class': 'col-md'}})  }}
                 {{ form_row(form.phone, {'attr' : {'placeholder': 'Téléphone' , 'class': 'col-md'}})  }}
-                {{ form_row(form.message, {'attr' : {'placeholder': 'Message' , 'class': 'col-md'}})  }}
+                {{ form_row(form.message, {'attr' : {'placeholder': 'Message' , 'class': 'col-md resize'}})  }}
                 <div class="text-center">
                     {{ form_row(form.submit, {'attr' : {'class': 'btn custom-button-brown my-3'}}) }}
                 </div>

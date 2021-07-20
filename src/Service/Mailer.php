@@ -21,7 +21,7 @@ class Mailer {
     {
 
         $email = (new TemplatedEmail())
-            ->from(new Address('crm.lite.cci@gmail.com', 'LeChenantier'))
+            ->from(new Address('contact@lechenantier.com', 'LeChenantier'))
             ->to(new Address($email))
             ->subject('Veuillez confirmer votre inscription !')
 

@@ -1,15 +1,11 @@
-<!doctype html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title> </title>
-</head>
-<body>
-<h3>{{ contactFormDataEmail }} vous a envoyé un message.</h3>
-    <p>Email de l'expéditeur : {{ contactFormDataEmail }}</p>
-    <p>Message : {{ contactFormDataMessage }}</p>
-</body>
-</html>
+<h4>Bonjour ! Un utilisateur du camping vous a laissé un message.</h4>
+
+<p>Nom de l'utilisateur : {{ contactFormDataName }}</p>
+
+<p>Adresse email : {{ contactFormDataEmail }}</p>
+
+<p>Téléphone : {{ contactFormDataPhone }}</p>
+
+<p>Message : {{ contactFormDataMessage }}</p>
+
+<img style="text-align:center;margin:auto;width:200px;height:200px;" class="logo" src="https://camping-lechenantier.com/images/logo.png" alt="logo_lechenantier">

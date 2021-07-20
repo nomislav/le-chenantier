@@ -38,7 +38,7 @@ class MapController extends AbstractController
             $this->addFlash('success', 'Votre emplacement a été selectionner');
 
             /* redirect to register route after chosing placeNo */
-            return $this->redirectToRoute('map_place');
+            return $this->redirectToRoute('registration');
         }
 
         return $this->render('map/map.html.twig', [

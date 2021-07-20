@@ -1,6 +1,6 @@
 /** General part **/
 * {
-    font-family: 'Roboto Slab', serif!important;
+    font-family: 'Roboto Slab', serif;
 }
 
 html, body, p {
@@ -287,6 +287,12 @@ footer {
     opacity: 1;
 }
 
+/** Contact part **/
+
+.resize {
+    resize: none;
+}
+
 /** Auth part **/
 
 .my-form {
@@ -339,10 +345,6 @@ footer {
 
 .badge-danger{
     background-color: #dc3545;
-}
-
-i{
-    color: white;
 }
 
 /** Media queries part **/

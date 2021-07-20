@@ -4,6 +4,7 @@ namespace App\Entity;
 
 use App\Repository\ContactRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * @ORM\Entity(repositoryClass=ContactRepository::class)
@@ -34,6 +35,8 @@ class Contact
 
     /**
      * @ORM\Column(type="string", length=255)
+     * @Assert\Length(min=10, minMessage="Votre mot de passe doit faire au minimum 10 caractères.")
+     * @Assert\Length(max=20, maxMessage="Votre mot de passe doit faire au maximum 20 caractères.")
      */
     private $phone;
 
