@@ -11,39 +11,35 @@ use Symfony\Component\HttpFoundation\Response;
 
 class MapController extends AbstractController
 {
-    public function newSelectedPlace
+
+    public function new
     (
         Request $request
     ): Response
     {
-        /* create new Map */
-        $place = new Map();
+        /* create new Map object */
+        $critary = new Map();
 
         /* new form */
-        $form = $this->createForm(MapType::class, $place);
+        $form = $this->createForm(MapType::class, $critary);
 
         /* handle request */
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid())
         {
-            $entityManager = $this->getDoctrine()->getManager();
-            $entityManager->persist($place);
-            $entityManager->flush();
+            $critary->setIsValided('true')
+                    ->setAvailable('true');
 
-            /* set place isValided by user */
-            $place->setIsValided(true);
+            $em = $this->getDoctrine()->getManager();
+            $em->persist($critary);
+            $em->flush();
 
-            /* add flash message on success */
-            $this->addFlash('success', 'Votre emplacement a été selectionner');
-
-            /* redirect to register route after chosing placeNo */
-            return $this->redirectToRoute('map_place');
+            return $this->redirectToRoute('registration');
         }
 
         return $this->render('map/map.html.twig', [
-            'map' => $place,
-            'form' => $form->createView(),
+            'form'  => $form->createView(),
         ]);
     }
 }

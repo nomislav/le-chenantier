@@ -6,17 +6,18 @@ storyboard:
     path: /storyboard
     controller: App\Controller\StoryboardController::index
 
-critaryform:
-    path: /critary
-    controller: App\Controller\CritaryFormController::new
+
+###############
+## MAP ROUTE ##
+##############
 
 map_place:
     methods: [GET, POST]
     path: /map
-    controller: App\Controller\MapController::newSelectedPlace
+    controller: App\Controller\MapController::new
 
 registration:
-    path: /registration
+    path: /map/registration
     controller: App\Controller\RegistrationController::registration
 
 security_login:

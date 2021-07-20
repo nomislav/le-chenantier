@@ -7,6 +7,8 @@
 {% block stylesheets %}
     <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
     <link rel="stylesheet" href="https://bootswatch.com/5/solar/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css">
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
 {% endblock %}
 
 {% block javascripts %}
@@ -29,6 +31,7 @@
 
             /* Array of markers */
             var markers = [
+
                 {
                     coords: {lat: 45.25975605935657, lng: 6.8085256466722255}
                 },
@@ -81,28 +84,32 @@
                     coords: {lat: 45.260367009729684, lng: 6.808774370670703}
                 },
                 {
-                    coords: {lat: 45.2600989173644, lng: 6.809436675426381}
+                    coords: {lat: 45.2600989173644, lng: 6.809436675426381},
+                    content: '<div class="filterDiv noCaravan"><h1>Test</h1><p>Lorem</p></div>',
                 },
                 {
-                    coords: {lat: 45.26017821242118, lng: 6.80947959077062}
+                    coords: {lat: 45.26017821242118, lng: 6.80947959077062},
+                    content: '<div class="filterDiv noElec" >No elec</div>'
                 },
                 {
-                    coords: {lat: 45.26026505926107, lng: 6.809522506114858}
+                    coords: {lat: 45.26026505926107, lng: 6.809522506114858},
+                    content: '<div class="filterDiv noCaravan">No caravan</div>'
                 },
                 {
-                    coords: {lat: 45.260336802202524, lng: 6.809538398170529}
+                    coords: {lat: 45.260336802202524, lng: 6.809538398170529},
+                    content: '<div class="filterDiv noElec">no elec</div>'
                 },
                 {
-                    coords: {lat: 45.260427424735816, lng: 6.809589158943394}
+                    coords: {lat: 45.260427424735816, lng: 6.809589158943394},
+                    content: '<div class="filterDiv onlyMoreThanFour">Only > 4 </div>'
                 },
                 {
-                    coords: {lat: 45.26052182305423, lng: 6.809645284134289}
+                    coords: {lat: 45.26052182305423, lng: 6.809645284134289},
+                    content: '<div class="filterDiv noElec">no elec</div>'
                 },
                 {
-                    coords: {lat: 45.26061999713887, lng: 6.809661176189961}
-                },
-                {
-                    coords: {lat: 45.26061999713887, lng: 6.809661176189961}
+                    coords: {lat: 45.26061999713887, lng: 6.809661176189961},
+                    content: '<div class="filterDiv onlyMoreThanFour"></div>'
                 },
                 {
                     coords: {lat: 45.260699291467915, lng: 6.809698525917751}
@@ -196,30 +203,24 @@
             /* add marker */
             function addMarker(props)
             {
+                /* add red marker on map */
                 var marker = new google.maps.Marker({
                     position: props.coords,
                     map: map
                 });
 
-                var infowindow = new google.maps.InfoWindow();
-
-                // marker.addListener('click', function(){
-                //     infowindow.open(map, marker);
-                // });
-
                 /*Google Map Marker Click Function*/
                 google.maps.event.addListener(marker, 'click', (function(marker)
                 {
-                    return function() {
-                        /*Bootstrap Modal Pop Up Open Code*/
-                        $("#myModal").modal('show');
-                    }
-                })
-                (marker));
+                     return function() {
+                         /*Bootstrap Modal Pop Up Open Code*/
+                         $("#myCritaryModale").modal('show');
+                     }
+                 })
+                 (marker));
             }
         }
     </script>
-
     <script async
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDfQ3q2ZueCo2jamGTPOrm-uMuJgD2Xmh4&callback&libraries=
 places&callback=initMap">
@@ -229,36 +230,42 @@ places&callback=initMap">
 {% endblock %}
 
 {% block body %}
-    <div class="map_title">
-        <h1>Le chenantier</h1>
-    </div>
-        <div class="container-map">
-            <!--The div element for the map -->
-            <div id="map"></div>
+    <div class="container-fluid">
+        {# add flash message#}
+        {% for message in app.flashes('success') %}
+            <div class="alert alert-success alert-dismissible fade show text-center">
+                {{ message }}
+            </div>
+        {% endfor %}
 
-            <!-- The Modal -->
-            <div class="modal" id="myModal">
-                <div class="modal-dialog placeNoButton">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h2 class="modal-title">Voulez-vous choisir cette emplacement ?</h2>
-                        </div>
-                        <!-- Modal body -->
-                        <div class="modal-body">
+{#        <!-- Button to Open modal to send critary -->#}
+{#        <div>#}
+{#            <button type="button" class="btn btn-info p-3" data-toggle="modal" data-target="#myCritaryModale">#}
+{#                Lancer une nouvelle recherche d'emplacement#}
+{#            </button>#}
+{#        </div>#}
 
-                            {{ form_start(form) }}
-                            {{ form_widget(form.isValided)}}
-                            {{ form_widget(form.submit)}}
-                            {{ form_end(form) }}
-                            <div>
+        <!-- Modal -->
+        <div class="modal fade" id="myCritaryModale" role="dialog">
+            <div class="modal-dialog">
 
-                            </div>
-                        </div>
-                        <button type="button" data-dismiss="modal" class="btn btn-outline-danger close ">
-                            Retour
-                        </button>
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title">Formulaire</h4>
+                    </div>
+                    <div class="modal-body">
+                        <form method="post" action="{{ path ('map_place')}}">
+                            {{ include('map/form.html.twig') }}
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
                     </div>
                 </div>
+
             </div>
         </div>
+    <!--The div element for the map -->
+    <div id="map"></div>
 {% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+    <div class="container-fluid ">
+        <div class="container-fluid pt-5 text-center back-critary">
+            <h4 class="pb-3">Afin de choisir votre emplacement, prenez le temps de répondre à ces quelques questions.</h4>
+            {{ form_start(form, {'attr' : {'novalidate': 'novalidate'}}) }}
+            <div class="container display-row">
+                <div class="form-group p-2">
+                    {{ form_label(form.start, 'Date du début de séjour ?') }}
+                    {{ form_widget(form.start) }}
+                </div>
+                <div class="form-group p-2">
+                    {{ form_label(form.end, 'Date de fin de séjour ?') }}
+                    {{ form_widget(form.end) }}
+                </div>
+                <div class="form-group p-2">
+                    {{ form_label(form.adult, 'Nombre d\'adulte(s) ?') }}
+                    {{ form_widget(form.adult) }}
+                </div>
+                <div class="form-group p-2">
+                    {{ form_label(form.child, 'Nombre d\'enfant(s) ?') }}
+                    {{ form_widget(form.child) }}
+                </div>
+                <div class="form-group p-2">
+                    {{ form_label(form.electricity, 'Emplacement tente ?') }}
+                    {{ form_widget(form.electricity, {'attr':{'class':'text-center'}}) }}
+                </div>
+                <div class="form-group p-2">
+                    {{ form_label(form.tent, 'Emplacement caravane ?') }}
+                    {{ form_widget(form.tent, {'attr':{'class':'text-center'}}) }}
+                </div>
+                <div class="form-group p-2">
+                    {{ form_label(form.caravan, 'Electricité nécessaire ?') }}
+                    {{ form_widget(form.caravan, {'attr':{'class':'text-center'}}) }}
+                </div>
+
+                <div class="text-center p-2 mb-3" id="critaryButton">
+                    {{ form_widget(form.submit, {'attr': {'class': 'btn btn-lg btn-success'}}) }}
+                </div>
+            </div>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
