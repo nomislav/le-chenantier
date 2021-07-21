@@ -7,15 +7,16 @@
 {% block body %}
     <div class="container-fluid back-index">
 
-        <div class="blank-index"></div>
-
-        <h1 class="text-center"><strong> CAMPING LE CHENANTIER</strong></h1>
+        <h1 class="text-center down"><strong> CAMPING LE CHENANTIER</strong></h1>
 
         <h4 class="text-center pb-4">Nous sommes ravis de vous accueillir sur le site du camping !</h4>
 
         <div class="text-center pt-5">
             <a class="btn custom-button-blue btn-lg mb-2" href="{{ path('storyboard') }}">Je souhaite m'installer</a>
-            <a class="btn custom-button-green btn-lg mb-2" href="{{ path('security_login') }}">Je suis déjà installé</a>
+            {% if not app.user %}
+                <a class="btn custom-button-green btn-lg mb-2" href="{{ path('security_login') }}">Je suis déjà installé</a>
+            {% endif %}
+
         </div>
 
         <div class="blank-index"></div>

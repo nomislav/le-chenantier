@@ -27,12 +27,15 @@ html, body, p {
     flex-direction: column;
 }
 
+.down {
+    padding-top:15%;
+}
+
 h1 {
     font-size: 5em !important;
 }
 
 a {
-    color:white !important;
     text-decoration: none!important;
 }
 
@@ -407,6 +410,10 @@ footer {
     }
     .custom-button-brown {
         width: 200px!important;
+    }
+    .none {
+        display:flex;
+        justify-content: flex-end;
     }
 
 }

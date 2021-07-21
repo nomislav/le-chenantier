@@ -1,9 +1,9 @@
 <nav class="navbar navbar-expand-lg navbar-dark background-green px-5 py-3">
-    <div class="col-8">
+    <div class="col-6">
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="{{ path('index') }}">Camping</a>
+        <a class="navbar-brand none" href="{{ path('index') }}">Camping</a>
     </div>
     <div class="collapse navbar-collapse col-4" id="navbarNav">
         <ul class="navbar-nav">
@@ -19,6 +19,15 @@
             <li class="nav-item">
                 <a class="nav-link" href="{{ path('contact') }}">Contact</a>
             </li>
+            {% if app.user %}
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('dashboard') }}">Tableau de bord</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ path('security_logout') }}">Déconnexion <i class="fas fa-sign-out-alt"></i></a>
+                </li>
+            {% endif %}
+
         </ul>
     </div>
 </nav>
